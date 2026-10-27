@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega 8</title>
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1 class="title">Entrega 8: Simulador de compras</h1>
+
+    <main class="contenedor">
+        <p id="mensaje" class="mensaje" role="status"></p>
+
+        <section class="panel">
+            <h2 class="title">Agregar producto</h2>
+            <div class="formulario">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Ingrese el nombre del producto">
+                </div>
+                <div class="campo">
+                    <label for="precio">Precio</label>
+                    <input type="number" id="precio" min="0" placeholder="Ingrese el precio del producto">
+                </div>
+                <div class="campo">
+                    <label for="stock">Cantidad en inventario</label>
+                    <input type="number" id="stock" min="1" placeholder="Ingrese la cantidad del producto">
+                </div>
+                <button id="agregar" class="btn">+ Agregar</button>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2 class="title">Lista de productos</h2>
+            <div class="barra-lista">
+                <div class="campo">
+                    <label for="buscar">Buscar producto</label>
+                    <input type="text" id="buscar" placeholder="Escribe para filtrar la lista">
+                </div>
+                <button id="restablecer" class="btn btn-secundario">Restablecer inventario</button>
+            </div>
+            <div id="lista-productos" class="lista-productos"></div>
+        </section>
+
+        <section class="panel">
+            <h2 class="title">Comprar producto</h2>
+            <div class="formulario">
+                <div class="campo">
+                    <label for="compra">Producto</label>
+                    <select id="compra">
+                        <option value="">Selecciona un producto</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="cantidad">Cantidad a comprar</label>
+                    <input type="number" id="cantidad" min="1" placeholder="Ingrese la cantidad a comprar">
+                </div>
+                <button id="comprar" class="btn">Comprar</button>
+            </div>
+            <div id="resultado-compra" class="resumen"></div>
+            <div class="acciones">
+                <button id="vaciar-compra" class="btn btn-secundario">Limpiar resumen</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
